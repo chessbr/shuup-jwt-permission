@@ -1,0 +1,8 @@
+{% from "shuup/admin/macros/general.jinja" import content_block %}
+{% set api_application_form = form["base"] %}
+
+{% call content_block(_("Basic details"), "fa-info-circle") %}
+    {{ bs3.field(api_application_form.name) }}
+    {{ bs3.field(api_application_form.enabled) }}
+    {{ bs3.field(api_application_form.key) }}
+{% endcall %}

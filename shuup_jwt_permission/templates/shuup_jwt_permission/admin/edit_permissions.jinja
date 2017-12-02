@@ -1,0 +1,8 @@
+{% from "shuup/admin/macros/general.jinja" import content_block %}
+{% set api_application_form = form["permissions"] %}
+
+{% call content_block(_("Permissions"), "fa-key") %}
+    {% for field in api_application_form %}
+        {{ bs3.field(field) }}
+    {% endfor %}
+{% endcall %}
